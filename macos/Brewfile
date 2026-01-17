@@ -1,5 +1,6 @@
 tap "koekeishiya/formulae"
 tap "tw93/tap"
+tap "yuccastream/tap"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Modern, maintained replacement for ls
@@ -46,24 +47,46 @@ brew "zplug"
 brew "koekeishiya/formulae/skhd"
 # Comprehensive macOS cleanup and application uninstall tool
 brew "tw93/tap/mole"
+# Software for create HTTP/TCP/SSH tunnels to local network
+brew "yuccastream/tap/tuna"
+# Powerful OpenSource VPN client
+cask "amneziavpn"
+# Scale, control, and manage Mac displays with advanced features
+cask "betterdisplay"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Universal database tool and SQL client
+cask "dbeaver-community"
 # Voice and text chat software
 cask "discord"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
+# AI-powered notepad for meetings
+cask "granola"
+# Simple and powerful proxy utility
+cask "karing"
+# Multi-document editor by KDE
+cask "kate"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
 # Reverse proxy, secure introspectable tunnels to localhost
 cask "ngrok"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Finder Toolbar app to open the current directory in Terminal or Editor
 cask "openinterminal"
 # Excellent replacement for Docker Desktop
 cask "orbstack"
+# Desktop virtualization software
+cask "parallels"
+# Windows-like program quitting when all windows are closed
+cask "swift-quit"
 # Messaging app with a focus on speed and security
 cask "telegram"
+# Multimedia player
+cask "vlc"
 # REST, GraphQL and gRPC client
 cask "yaak"
 # Gecko based web browser
