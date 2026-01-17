@@ -17,6 +17,3 @@ ctrl - q : open -a 'Obsidian'
 
 # open pycharm:
 ctrl - p : open -a 'PyCharm'
-
-# Hyper has its own hotkey with `ctrl + ;` in `hyper.js`,
-# because this app does not allow `;` as a hotkey for some reason.

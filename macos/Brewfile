@@ -45,8 +45,6 @@ cask "cursor"
 cask "discord"
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-# Terminal built on web technologies
-cask "hyper"
 # Smooths scrolling and set mouse scroll directions independently
 cask "mos"
 # Reverse proxy, secure introspectable tunnels to localhost
@@ -61,6 +59,5 @@ cask "orbstack"
 cask "telegram"
 # REST, GraphQL and gRPC client
 cask "yaak"
-cask "postman"
 # Gecko based web browser
 cask "zen"
