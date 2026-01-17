@@ -1,0 +1,95 @@
+name: Linters Checks
+
+on:  # yamllint disable-line rule:truthy
+  pull_request:
+    branches: [main]
+
+jobs:
+  shellcheck:
+    name: ShellCheck
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install ShellCheck
+        run: sudo apt-get update && sudo apt-get install -y shellcheck
+
+      - name: Run ShellCheck
+        run: |
+          # Find all `.sh` files:
+          sh_files=$(find . -type f -name "*.sh")
+
+          # Adding files from `shell` folder:
+          shell_folder=$(find shell -type f 2>/dev/null || echo "")
+
+          # Adding files from `config` folder:
+          config_folder=$(
+            find config -type f \
+              \( -name "bashrc" -o -name "bash_profile" \) \
+              2>/dev/null || echo ""
+          )
+
+          # Merge:
+          all_files="$sh_files $shell_folder $config_folder"
+
+          # Check
+          if [ -z "$all_files" ]; then
+            echo "No shell scripts found."
+          else
+            echo "Running ShellCheck on the following files:"
+            echo "$all_files"
+            shellcheck -s bash $all_files
+          fi
+
+  editorconfig:
+    name: EditorConfig Check
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install EditorConfig Checker
+        run: |
+          sudo apt-get install -y npm
+          npm install -g editorconfig-checker
+
+      - name: Run EditorConfig validation
+        run: |
+          if [ -f config/editorconfig ]; then
+            echo "Checking config/editorconfig"
+            editorconfig-checker
+          else
+            echo "No editorconfig file found, skipping."
+          fi
+
+  yamllint:
+    name: YAML Lint
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install yamllint
+        run: pip install yamllint
+
+      - name: Lint YAML files
+        run: |
+          yamllint -d "{extends: default, ignore: dotbot*}" -f github .
+
+  codespell:
+    name: CodeSpell Check
+    runs-on: ubuntu-latest
+    if: github.actor != 'dependabot[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: CodeSpell Check
+        uses: codespell-project/actions-codespell@v2
+        with:
+          check_filenames: true
+          check_hidden: true
