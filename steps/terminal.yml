@@ -21,7 +21,11 @@
       force: true
 
     ~/.zplugrc: config/zplugrc
-    ~/.hyper.js: config/hyper.js
+
+    # Rectangle:
+    "~/Library/Application Support/Rectangle/RectangleConfig.json":
+      path: config/rectangle
+      create: true
 
     # Git:
     ~/.gitconfig: config/gitconfig
