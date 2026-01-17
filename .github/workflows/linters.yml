@@ -1,3 +1,5 @@
+---
+
 name: Linters Checks
 
 on:  # yamllint disable-line rule:truthy

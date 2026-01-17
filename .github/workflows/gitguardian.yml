@@ -1,3 +1,5 @@
+---
+
 name: GitGuardian Scan
 on:
   pull_request:
