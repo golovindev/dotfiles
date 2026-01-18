@@ -1,6 +1,7 @@
 # golovindev`s dotfiles
 
 [![GitGuardian scan](https://github.com/golovindev/dotfiles/actions/workflows/gitguardian.yml/badge.svg?branch=main)](https://github.com/golovindev/dotfiles/actions/workflows/gitguardian.yml)
+[![Linters Checks](https://github.com/golovindev/dotfiles/actions/workflows/linters.yml/badge.svg?branch=main)](https://github.com/golovindev/dotfiles/actions/workflows/linters.yml)
 
 The structure and content are inspired by [@kondratevdev](http://github.com/kondratevdev/) and [@sobolevn](http://github.com/sobolevn/) dotfiles.
 
@@ -14,10 +15,9 @@ What's in there?
 - `Zen` settings and plugins. See [`zen`](https://github.com/golovindev/dotfiles/tree/master/zen)
 
 
-
 ## Installation
 
 0. Decide what you want to install: in `install` file comment out `run_dotbot 'steps/...'` that you don't need
-1. Clone this repo with: `git clone https://github.com/golovindev/dotfiles dotfiles`
+1. Clone this repo with: `git clone https://github.com/golovindev/dotfiles.git`
 2. `cd dotfiles/`
 3. Run: [`bash ./install`](https://github.com/golovindev/dotfiles/blob/master/install)

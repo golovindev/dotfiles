@@ -31,7 +31,7 @@ brew "pipx"
 brew "pyenv"
 # Ruby version manager
 brew "rbenv"
-# Window management app based on Spectacle, written in Swift.
+# Window management app based on Spectacle, written in Swift
 brew "rectangle"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
