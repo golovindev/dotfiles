@@ -1,0 +1,23 @@
+---
+# Setting up PyCharm:
+- shell:
+    - command: |
+        for dir in ~/Library/Application\ Support/JetBrains/PyCharm*/; do
+          if [ -d "$dir" ]; then
+            mkdir -p "$dir/templates"
+            cp -a "$(pwd)/pycharm/live-templates/." "$dir/templates/"
+            
+            mkdir -p "$dir/colors"
+            if [ -d "$(pwd)/pycharm/colors" ]; then
+              cp -a "$(pwd)/pycharm/colors/." "$dir/colors/"
+            fi
+            
+            mkdir -p "$dir/options"
+            if [ -d "$(pwd)/pycharm/options" ]; then
+              cp -a "$(pwd)/pycharm/options/." "$dir/options/"
+            fi
+          fi
+        done
+      description: Copy PyCharm configurations
+      stdout: true
+      stderr: true

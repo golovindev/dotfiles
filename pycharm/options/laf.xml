@@ -1,0 +1,11 @@
+<application>
+  <component name="LafManager">
+    <laf themeId="025e0b88-3ed4-406b-9d2a-203853eb2d55" />
+    <lafs-to-previous-schemes>
+      <laf-to-scheme laf="025e0b88-3ed4-406b-9d2a-203853eb2d55" scheme="Pustota-color-theme" />
+      <laf-to-scheme laf="Darcula" scheme="Pustota-color-theme" />
+      <laf-to-scheme laf="JetBrainsHighContrastTheme" scheme="Pustota-color-theme" />
+      <laf-to-scheme laf="JetBrainsLightTheme" scheme="Pustota-color-theme" />
+    </lafs-to-previous-schemes>
+  </component>
+</application>
