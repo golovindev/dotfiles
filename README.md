@@ -11,6 +11,7 @@ What's in there?
 
 - `ohmyzsh` with autocompletion and syntax highlighting
 - `MacOS` configuration. `brew` dependencies including: applications, fonts, etc. See [`macos`](https://github.com/golovindev/dotfiles/blob/master/macos/)
+- `PyCharm` settings. See [`pycharm`](https://github.com/golovindev/dotfiles/tree/master/pycharm)
 - `shell` configuration. See [`shell`](https://github.com/golovindev/dotfiles/tree/master/shell)
 - `Zen` settings and plugins. See [`zen`](https://github.com/golovindev/dotfiles/tree/master/zen)
 
